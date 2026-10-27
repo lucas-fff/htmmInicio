@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <!-- introducao ao Bootstrap - todos os elementos do bootstrap ficam dentro de container -->
+    <div class="container">
+        <h1>Bem vindo ao Bootstrap</h1>
+        <p>A primeira coisa importante de entender é que elementos no Bootstrap ficam dentro de um container.</p>
+    </div>
+        
+    <!-- o container-fluid - usa toda a largura da tela -->
+    <div class="container-fluid">
+        <h1>Olá mundo</h1>
+        <p>Tudo na página deve ser estruturado dentro do container</p>
+    </div>
+    <!-- 
+        O bootstrap trabalha com um grid de 12 colunas que distribuem os elementos na tela
+    -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1 bg-info"><p>Imagem</p></div>
+            <div class="col-11 bg-primary"><p>Texto que descreve a imagem</p></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 bg-info"><p>Imagem</p></div>
+            <div class="col-10 bg-primary"><p>Texto que descreve a imagem</p></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 bg-info"><p>Imagem</p></div>
+            <div class="col-9 bg-primary"><p>Texto que descreve a imagem</p></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 bg-info"><p>Imagem</p></div>
+            <div class="col-8 bg-primary"><p>Texto que descreve a imagem</p></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5 bg-info"><p>Imagem</p></div>
+            <div class="col-7 bg-primary"><p>Texto que descreve a imagem</p></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 bg-info"><p>Imagem</p></div>
+            <div class="col-6 bg-primary"><p>Texto que descreve a imagem</p></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-7 bg-info">Imagem</div>
+            <div class="col-5 bg-primary"><p>Texto que descreve a imagem</p></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8 bg-info">Imagem</div>
+            <div class="col-4 bg-primary"><p>Texto que descreve a imagem</p></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-9 bg-info">Imagem</div>
+            <div class="col-3 bg-primary"><p>Texto que descreve a imagem</p></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-10 bg-info">Imagem</div>
+            <div class="col-2 bg-primary"><p>Texto que descreve a imagem</p></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-11 bg-info">Imagem</div>
+            <div class="col-1 bg-primary"><p>Texto que descreve a imagem</p></div>
+        </div>
+    </div>
+
+    <!-- 
+    Uma outra opção que temos é dividir o container propocionalmente 
+    Nesse caso basta colocar col na classe e não especificar um numero
+    de colunas
+    -->
+    <div class="container">
+        <div class="row">
+            <div class="col">Coluna 1</div>
+            <div class="col">Coluna 2</div>
+            <div class="col">Coluna 3</div>
+        </div>
+    </div>
+
+    <!------------------------------------------------------------ 
+    O sistema de breakpoint do Bootstrap
+    small  --  sm  --  usado para celulares >= 576
+    medium  --  md  --  Tablets >= 768
+    large --  lg  --  Notebook >= 992
+    extra large  --  xl  --  Desktops > 1200
+    extra extra large --  xxl  --  Televisores > 1400
+    -------------------------------------------------------------->
+    <div class="row">
+        <!-- ocupa 12 no celular e 6 no desktop -->
+        <div class="col-12 col-md-6 bg-success">Coluna 1 outro</div>
+        <div class="col-12 col-md-6 bg-danger">Coluna 2 outro</div>
+    </div>
+
+    <div class="row">
+        <!-- some se for menor que 992 -->
+        <div class="d-none d-lg-block bg-success">Coluna 1</div>
+        <div class="d-none d-lg-block bg-danger">Coluna 1</div>
+    </div>
+
+    <!-- mesmo de cima, porem os breakpoint e passado na classe row -->
+    <div class="row d-none d-lg-block">
+        <!-- some se for menor que 992 -->
+        <div class="bg-secondary">Coluna 1</div>
+        <div class="bg-warning">Coluna 1</div>
+    </div>
+
+    <!-- varios breakpoints, desktop, notebooks e menores -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
+            <div class="col" style="border: 5px solid #2A3132;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, et placeat soluta debitis alias, doloremque omnis, voluptatem nihil fugiat enim perspiciatis fugit molestiae velit porro! Expedita assumenda optio voluptates.
+            </div>
+            <div class="col" style="border: 5px solid #2A3132;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, et placeat soluta debitis alias, doloremque omnis, voluptatem nihil fugiat enim perspiciatis fugit molestiae velit porro! Expedita assumenda optio voluptates.
+            </div>        
+            <div class="col" style="border: 5px solid #2A3132;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, et placeat soluta debitis alias, doloremque omnis, voluptatem nihil fugiat enim perspiciatis fugit molestiae velit porro! Expedita assumenda optio voluptates.
+            </div>
+            <div class="col" style="border: 5px solid #2A3132;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, et placeat soluta debitis alias, doloremque omnis, voluptatem nihil fugiat enim perspiciatis fugit molestiae velit porro! Expedita assumenda optio voluptates.
+            </div>            
+            <div class="col" style="border: 5px solid #2A3132;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, et placeat soluta debitis alias, doloremque omnis, voluptatem nihil fugiat enim perspiciatis fugit molestiae velit porro! Expedita assumenda optio voluptates.
+            </div>            
+            <div class="col" style="border: 5px solid #2A3132;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, et placeat soluta debitis alias, doloremque omnis, voluptatem nihil fugiat enim perspiciatis fugit molestiae velit porro! Expedita assumenda optio voluptates.
+            </div>
+        </div>
+    </div>
+
+    <!-- Titulo do maior para o menor-->
+    <div class="container">
+        <h1>As cores no bootstrap</h1>
+        <h2>As cores no bootstrap</h2>
+        <h3>As cores no bootstrap</h3>
+        <h4>As cores no bootstrap</h4>
+        <h5>As cores no bootstrap</h5>
+    </div>
+
+    <!-- colocando cores nas letras -->
+    <div class="container">
+        <p class="text-primary">Texto Azul primary</p>
+        <p class="text-success">Texto verde success</p>
+        <p class="text-info">Texto azul claro</p>
+        <p class="text-secondary">Texto cinza</p>
+        <p class="text-danger">Texto vermelho</p>
+        <p class="text-warning">Texto amarelo</p>
+        <p class="text-light">Texto branco</p>
+        <p class="text-dark">Texto preto</p>
+        <p class="text-muted">Texto preto fosco</p>
+    </div>
+
+    <!-- Aplicando cores de fundo -->
+    <div class="bg-primary text-white p-3">Fundo Azul com Texto Branco</div>
+    <div class="bg-warning text-dark p-3">Fundo Amarelo com Texto Escuro</div>
+    <div class="bg-dark text-white p-3">Fundo Escuro com Texto Branco</div>
+
+    <!-- adicionando gradiente -->
+    <div class="bg-danger bg-gradient">Gradiente</div>
+
+    <!-- aplicando opacidade -->
+    <div class="bg-success bg-opacity-50">Gradiente</div>
+
+    <!-- Aplicando bordas coloridas -->
+    <div class="border border-primary">Borda Azul</div>
+    <div class="border border-success">Borda Verde</div>
+    <div class="border border-danger border-3">Borda Vermelha mais espessa</div>
+
+    <!-- Cores em componentes -->
+    <button class="btn bg-success">Salvar</button>
+    <button class="btn bg-danger">Cancelar</button>
+    <button class="btn btn-primary">Enviar</button>
+
+    <div class="alert alert-warning" role="alert">
+        Atenção: verifique os dados antes de prosseguir!
+    </div>
+
+    <!-- Cores neutras text-white, text-black -->
+    <div class="alert alert-dark" role="alert">
+        Atenção: verifique os dados antes de prosseguir!
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+</body>
+</html>
